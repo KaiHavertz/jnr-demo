@@ -16,7 +16,27 @@ const routes = [
     name: "navBar",
     component: () =>
       import("@/layout/navBar.vue")
-  }
+  }, {
+    path: "/topBar",
+    name: "topBar",
+    component: () =>
+      import("@/layout/topBar.vue")
+  }, {
+    path: "/jnrNavBar",
+    name: "jnrNavBar",
+    component: () =>
+      import("@/components/jnr/jnrNavBar.vue")
+  }, {
+    path: "/jnrDialog",
+    name: "jnrDialog",
+    component: () =>
+      import("@/components/jnr/jnrDialog.vue")
+  },{
+    path: "/jnrTabs",
+    name: "jnrTabs",
+    component: () =>
+      import("@/components/jnr/jnrTabs.vue")
+  },
 ];
 
 const router = new VueRouter({

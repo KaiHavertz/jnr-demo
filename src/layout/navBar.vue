@@ -34,38 +34,7 @@
     </el-aside>
     <el-container>
       <el-header class="me-header" height="5rem">
-        <el-container class="me-top-menu">
-          <el-menu
-            :default-active="activeIndex2"
-            class="el-menu-demo"
-            mode="horizontal"
-            @select="handleSelect"
-            background-color="#fff"
-            text-color="#636e72"
-            active-text-color="#6c5ce7"
-          >
-            <el-menu-item index="1">处理中心</el-menu-item>
-            <el-submenu index="2">
-              <template slot="title">我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
-              <el-submenu index="2-4">
-                <template slot="title">选项4</template>
-                <el-menu-item index="2-4-1">选项1</el-menu-item>
-                <el-menu-item index="2-4-2">选项2</el-menu-item>
-                <el-menu-item index="2-4-3">选项3</el-menu-item>
-              </el-submenu>
-            </el-submenu>
-            <el-menu-item index="3" disabled>消息中心</el-menu-item>
-            <el-menu-item index="4">
-              <div>
-                <el-avatar
-                  src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-                ></el-avatar></div
-            ></el-menu-item>
-          </el-menu>
-        </el-container>
+        <jnr-nav-bar v-show="true"></jnr-nav-bar>
         <el-container>
           <el-breadcrumb
             separator-class="el-icon-arrow-right"
@@ -140,10 +109,11 @@
 // import $ from "jquery";
 import echarts from "../components/echarts/echarts.vue";
 import jnrTabs from "../components/jnr/jnrTabs.vue";
+import jnrNavBar from "../components/jnr/jnrNavBar.vue";
 export default {
   name: "navBar",
 
-  components: { echarts, jnrTabs },
+  components: { echarts, jnrTabs, jnrNavBar },
   props: {
     msg: String,
   },
@@ -405,8 +375,9 @@ export default {
 </script>
 <style lang="less">
 .me-header {
+  margin-top: 0 !important;
   margin-bottom: 1rem;
-  background-color: #fff;
+  background: #f3f3f3 !important;
   a {
     text-decoration: none;
   }
@@ -421,11 +392,13 @@ export default {
   .me-breadcrumb {
     height: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    background: #f3f3f3 !important;
+    width: 100%;
   }
 }
-el-menu-demo el-menu--horizontal el-menu > li {
-  border-bottom: none !important;
+.hello {
+  margin-top: 0 !important;
 }
 </style>

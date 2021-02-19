@@ -1,13 +1,5 @@
 <template>
   <el-container class="me-main">
-    <div class="me-button-group">
-      <el-button-group>
-        <el-button type="primary" icon="el-icon-edit">{{ msg }}</el-button>
-        <el-button type="primary" icon="el-icon-edit">条形图</el-button>
-        <el-button type="primary" icon="el-icon-share">柱状图</el-button>
-        <el-button type="primary" icon="el-icon-delete">复式图</el-button>
-      </el-button-group>
-    </div>
     <div id="main" style="width: 600px; height: 400px"></div>
   </el-container>
 </template>

@@ -39,7 +39,7 @@
   </el-container>
 </template>
 <script>
-import jnrDialog from "@/components/menu/jnrDialog.vue";
+import jnrDialog from "@/components/jnr/jnrDialog.vue";
 import $ from "jquery";
 import echarts from "../components/echarts/echarts.vue";
 export default {
