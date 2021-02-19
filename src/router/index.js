@@ -16,7 +16,7 @@ const routes = [
     name: "navBar",
     component: () =>
       import("@/layout/navBar.vue")
-  },
+  }
 ];
 
 const router = new VueRouter({

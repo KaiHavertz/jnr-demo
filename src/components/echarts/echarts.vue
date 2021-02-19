@@ -8,7 +8,7 @@
         <el-button type="primary" icon="el-icon-delete">复式图</el-button>
       </el-button-group>
     </div>
-    <div id="main" style="width: 600px; height: 600px"></div>
+    <div id="main" style="width: 600px; height: 400px"></div>
   </el-container>
 </template>
 <script>
@@ -45,7 +45,7 @@ export default {
 </script>
 <style lang="less">
 .me-main {
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   flex-direction: column !important;
   justify-content: center;
@@ -55,10 +55,10 @@ export default {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   #main {
-    border: 1px solid red;
+    // border: 1px solid red;
     width: 100%;
   }
 }
