@@ -82,6 +82,19 @@ export default {
     */,
     };
   },
+  // 使用计算属性修改 父组件传过来的值 dataList
+  computed: {
+    dataList: {
+      get() {
+        //计算属性的get方法，返回值，初始化时会被调用,当data相关的值没有发生变化时，从缓存中取
+        return this.getUtcTime(date) + this.str;
+      },
+      set(val) {
+        //计算属性的set方法，修改设置值,当data相关值发生变化，会调用该方法，之后再调用get方法
+        console.log("调用了 set", val);
+      },
+    },
+  },
   // 预处理用户自定义数据
   mounted() {
     // 0 避免作用域失效  复制 this
@@ -252,6 +265,8 @@ export default {
         // 关闭 index项
         return tab.index != index || !tab.applyClose; //返回关不了的新数组
       });
+      //更新 dataList
+      this.dataList = this.tabsDataArray;
     },
     //提供右键打开菜单事件
     closeLeft() {
